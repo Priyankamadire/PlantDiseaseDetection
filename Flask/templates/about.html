@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Plant Disease Detection
+{% endblock pagetitle %}
+{% block body %}
+<style>
+    body {
+        overflow-x: hidden;
+    }
+
+    .content-container {
+        padding: 20px; /* Add padding for better readability */
+    }
+
+    @media only screen and (max-width: 830px) {
+        .content-container {
+            width: 100%; /* Make the content container full width on small screens */
+        }
+    }
+
+    @media (min-width: 830px) and (max-width: 1536px) {
+        .mobile {
+            display: none;
+        }
+    }
+</style>
+<div class="col mx-auto">
+    <div class="p-5 bg-white shadow rounded-lg content-container" style="height: 95%;">
+        <h3>Reasons why detecting diseases in plants is crucial:</h3>
+        <ul>
+            <li><strong>Crop Health and Yield:</strong> Diseases can significantly impact the health and yield of crops. By detecting diseases early, farmers can take prompt action to prevent the spread of diseases and minimize crop damage, thereby safeguarding their harvest and maintaining agricultural productivity.</li>
+            <li><strong>Economic Impact:</strong> Plant diseases can lead to substantial economic losses for farmers, agricultural industries, and economies as a whole. Early detection allows for timely intervention, reducing the economic impact of crop diseases by minimizing losses and preserving market value.</li>
+            <li><strong>Food Security:</strong> With a growing global population, ensuring food security is paramount. Disease-resistant plants and effective disease management practices are essential for sustaining agricultural production and meeting the food demands of the world's population. Detecting diseases helps prevent widespread crop failures and ensures a stable food supply.</li>
+            <li><strong>Environmental Protection:</strong> Some plant diseases can have environmental consequences, such as the spread of pathogens to natural ecosystems or the contamination of soil and water sources. Early detection and management of plant diseases can help mitigate these environmental impacts and protect biodiversity.</li>
+            <li><strong>Sustainability:</strong> Sustainable agricultural practices aim to minimize the use of harmful pesticides and chemicals while maximizing crop productivity. Early disease detection enables targeted and precise interventions, reducing the reliance on chemical treatments and promoting environmentally friendly approaches to pest and disease management.</li>
+        </ul>
+        <center>
+            <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="max-width: 100%;" alt="Plant Disease" />
+        </center>
+    </div>
+</div>
+{% endblock body %}

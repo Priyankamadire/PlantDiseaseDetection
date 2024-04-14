@@ -1,0 +1,65 @@
+<html>
+{% extends 'base.html' %}
+{% block pagetitle %}
+AI Engine
+{% endblock pagetitle %}
+
+{% block body %}
+<div>
+    <div class="container">
+        <!-- For demo purpose -->
+        <div class="row mb-5 text-center text-white">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="display-4" style="padding-top: 2%;font-weight: 400;color: rgb(4, 54, 4);"><b>Plant Disease Detection</b></h1>
+                <p class="lead" style="font-weight: 500;color: black;">Upload an image of the affected leaf to identify the disease and receive recommendations on how to mitigate it.</p>
+            </div>
+        </div>
+        <!-- End -->
+        <div class="row ">
+            
+            <div class="col mx-auto">
+                <div class="p-5 bg-white shadow " style="height: 95%;">
+                    <center>
+                    <img
+                        src="https://wallup.net/wp-content/uploads/2016/04/06/359287-nature-leaves-closeup-macro-plants-green-maple_leaves.jpg"
+                        height="300" alt="" width="500">
+           
+                    <!-- Default bootstrap file upload-->
+
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <div class="custom-file overflow-hidden mb-4">
+                            <input type="file" id="actual-btn" hidden name="image" />
+                            <label for="actual-btn">Choose File</label>
+                            <span id="file-chosen">No file chosen</span>
+                        </div>
+                    </center>
+
+                        <!-- End -->
+
+                       
+
+                        <!-- Custom bootstrap upload file-->
+                        <center>
+                            <a class="mx-2"><button type="submit" class="btn btn-outline-success">Submit</button></a>
+                        </center>
+                    </form>
+                    <!-- End -->
+
+                </div>
+            </div>
+       
+        </div>
+    </div>
+</div>
+
+<script>
+    const actualBtn = document.getElementById('actual-btn');
+
+    const fileChosen = document.getElementById('file-chosen');
+
+    actualBtn.addEventListener('change', function () {
+        fileChosen.textContent = this.files[0].name
+    })
+</script>
+
+{% endblock body %}
